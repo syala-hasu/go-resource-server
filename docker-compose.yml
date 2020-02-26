@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: ./docker/app
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./workspace/app/src:/app/src
+    ports:
+      - "8080:8080"
